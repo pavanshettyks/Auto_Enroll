@@ -4,6 +4,9 @@ import time
 
 print("Opening the campus Portal")
 
+#Need to use chrome driver not the direct extension
+#Use http://chromedriver.chromium.org/downloads to download.
+#Use the file Path 
 driver = webdriver.Chrome(executable_path = r'C:\Users\Pavan\Documents\Python Scripts\chromedriver.exe');
 
 
@@ -27,5 +30,5 @@ print(window_before_title)
 
 sub = driver.find_element_by_class_name("LoginButton").click()
 
-#Quit
+#Quit the browser
 driver.quit()
