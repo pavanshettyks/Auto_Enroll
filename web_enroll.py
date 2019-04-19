@@ -26,4 +26,6 @@ window_before_title = driver.title
 print(window_before_title)
 
 sub = driver.find_element_by_class_name("LoginButton").click()
+
+#Quit
 driver.quit()
