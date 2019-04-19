@@ -6,23 +6,27 @@ print("Opening the campus Portal")
 
 #Need to use chrome driver not the direct extension
 #Use http://chromedriver.chromium.org/downloads to download.
-#Use the file Path 
+#Use the file Path
 driver = webdriver.Chrome(executable_path = r'C:\Users\Pavan\Documents\Python Scripts\chromedriver.exe');
 
-
-#text_area = driver.find_element_by_id('textarea')
-#text_area.send_keys("This text is send using Python code.")
 username = input("Enter User Name: ")
 password = input("Enter password: ")
 
+#Enter the campus portal
 driver.get('https://my.fullerton.edu/')
+
+#Full screen
+driver.maximize_window()
+ 
+#Search element username by id and populate it
 uname = driver.find_element_by_id('username')
 uname.send_keys(username)
 
+#Search element password by id and populate it
 pwd = driver.find_element_by_id('password')
 pwd.send_keys(password)
 
-
+#To tackle multiple windows being opened in the future
 window_before = driver.window_handles[0]
 
 window_before_title = driver.title
