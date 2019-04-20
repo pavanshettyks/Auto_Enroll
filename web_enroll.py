@@ -36,7 +36,7 @@ sub = driver.find_element_by_class_name("LoginButton").click()
 
 main_window = driver.current_window_handle
 driver.find_element_by_id('986552').click()
-child = driver.window_handles[1]
+child = driver.window_handles[1] 
 driver.switch_to.window(child)
 #print ("Child Window ID is : %s" %child)
 print("Child Window Title is : %s " %(driver.title))
